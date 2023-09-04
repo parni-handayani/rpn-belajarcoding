@@ -20,7 +20,7 @@ Algoritma
 1. membuat variabel input, misal: let hari = 21, bulan = 1, tahun = 1945
 2. melakukan pengecekan var bulan, 
     jika nilainya 1 maka nilai var bulan akan berubah menjadi Januari s/d
-    jika nilainya 2 maka nilai var bulan akan berubah menjadi Desember
+    jika nilainya 12 maka nilai var bulan akan berubah menjadi Desember
 3. jika nilai yang dimasukkan tidak sama dengan 1 s/d 12, 
     tampilkan peringatan untuk memasukkan nilai bulan dari 1 s/d 12 
 4. menampilkan tanggal 21 Januari 1945
