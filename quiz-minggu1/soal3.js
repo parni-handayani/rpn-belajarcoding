@@ -4,10 +4,25 @@
 // Contoh, jika menit adalah 63, maka function akan me-return "1:03".
 
 // Algoritma
-
+// membuat function dengan parameter bertype data int
+// untuk mendapatkan nilai jam :
+// membagi nilai parameter dengan 60, kemudian dengan method floor hasil pembagian dibulatkan kebawah
+// kemudian ditampung dalam variable
+// untuk mendapatkan nilai menit :
+// dengan menggunakan modulus 60, kemudian ditampung dalam varible jg
+// 
 
 function konversiMenit(menit) {
-    // you can only write your code here!
+  let tampilan = "";
+  let hour = Math.floor (menit/60);
+  let minute = menit % 60;
+  
+  if (minute < 10){
+    tampilan = `${hour}:0${minute}`;
+  } else {
+    tampilan = `${hour}:${minute}`;
+  }
+  return tampilan;
 }
   
   // TEST CASES
@@ -17,7 +32,4 @@ function konversiMenit(menit) {
   console.log(konversiMenit(88)); // 1:28
   console.log(konversiMenit(120)); // 2:00
 
-// ------------------------------------
-console.log('')
-// ------------------------------------
 
