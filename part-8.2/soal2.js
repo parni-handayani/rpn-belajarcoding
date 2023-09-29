@@ -45,9 +45,23 @@ function dataHandling(data) {
             break;
     }
     console.log(bulan);
-    console.log(tanggal);
-    let tanggal3 = `${tanggal[0]}-${tanggal[1]}-${tanggal[2]}`;
-    console.log(tanggal3);
+
+    // if (tanggal[1] == "05"){
+    //     console.log("Mei");
+    // }
+
+    // console.log(tanggal);
+    console.log(tanggal[2],tanggal[0],tanggal[1]);
+
+    console.log(tanggal.join("-"));
+    // let tanggal3 = `${tanggal[0]}-${tanggal[1]}-${tanggal[2]}`;
+    // console.log(tanggal3);
+
+    let nama = data[1];
+    console.log(nama.slice(0,15));
+    // if (data[2].length > 15){
+    //     console.log("Roman Alamsyah ")
+    // }
 }
 
 dataHandling(input);
