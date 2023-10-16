@@ -9,7 +9,6 @@ function hitungJumlahKata(kalimat) {
     for (let i = 0; i < kalimat.length; i++){
         if (kalimat[i] == " "){
             count++
-            console.log(`hasil counter ${count}`);
         }
     }
     return count + 1;
