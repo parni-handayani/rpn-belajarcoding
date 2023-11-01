@@ -6,7 +6,8 @@ Diberikan sebuah function targetTerdekat(arr) yang menerima satu parameter berup
 2. mencari nilai index 'o'
 3. mencari nilai index 'x' dan menampung setiap nilai x kedalam array baru 
 jika tidak ada 'x' dalam array, return 0.
-4. jika nilai index o < index x, kembalikan nilai index x yang paling kecil dan sebaliknya
+4. pada array baru kembalikan nilai index x yang paling kecil, jika nilai index o < index x 
+dan sebaliknya
 5. kurangkan nilai index o dan index x
 */
 
@@ -26,7 +27,7 @@ function targetTerdekat(arr) {
     let x = arrNew[0];
     for (let j = 0; j < arrNew.length; j++){
         if (o < arrNew[j]){
-            if (arrNew[j] < result){
+            if (arrNew[j] < x){
                 x = arrNew[j];
             }
         } else {
