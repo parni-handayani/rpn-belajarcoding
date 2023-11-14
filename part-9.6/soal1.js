@@ -6,6 +6,12 @@ function changeMe(arr) {
         obj.lastName = arr[i][1];
         obj.gender = arr[i][2];
         obj.age = arr[i][3];
+        // let obj = {
+        //     firstName : arr[i][0],
+        //     lastName : arr[i][1],
+        //     gender : arr[i][2],
+        //     age : arr[i][3]
+        // };
         if (obj.age === undefined){
             obj.age = "Invalid Birth Year";
         } else {
