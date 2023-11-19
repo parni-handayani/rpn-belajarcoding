@@ -10,6 +10,35 @@ Jika input adalah string kosong ('') maka return array kosong
 */
 
 function meleeRangedGrouping (str) {
+    let temp = str.split(",")
+    if (str === ''){
+        return [];
+    }
+    let arrRanged = [], arrMelee = [], arrHero = [];
+        for (let i = 0; i < temp.length; i++){
+        let temp2 = temp[i].split("-")
+        if (temp2[1] === "Ranged"){
+            arrRanged.push(temp2[0]);
+        } else {
+            arrMelee.push(temp2[0]);
+        }
+    }
+    arrHero.push(arrRanged);
+    arrHero.push(arrMelee);
+    return arrHero;
+}
+
+// TEST CASE
+console.log(meleeRangedGrouping('Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged'));
+// [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
+
+console.log(meleeRangedGrouping('Drow Ranger-Ranged,Chen-Ranged,Dazzle-Ranged,Io-Ranged'));
+// [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
+
+console.log(meleeRangedGrouping('')); // []
+
+// uji coba yang ke-1
+function meleeRangedGrouping (str) {
     let temp = str.split (",")
     if (str === ''){
         return [];
@@ -31,12 +60,3 @@ function meleeRangedGrouping (str) {
     arrHero.push(arrMelee);
     return arrHero;
 }
-
-// TEST CASE
-console.log(meleeRangedGrouping('Razor-Ranged,Invoker-Ranged,Meepo-Melee,Axe-Melee,Sniper-Ranged'));
-// [ ['Razor', 'Invoker', 'Sniper'], ['Meepo', 'Axe'] ]
-
-console.log(meleeRangedGrouping('Drow Ranger-Ranged,Chen-Ranged,Dazzle-Ranged,Io-Ranged'));
-// [ ['Drow Ranger', 'Chen', 'Dazzle', 'Io'], [] ]
-
-console.log(meleeRangedGrouping('')); // []
